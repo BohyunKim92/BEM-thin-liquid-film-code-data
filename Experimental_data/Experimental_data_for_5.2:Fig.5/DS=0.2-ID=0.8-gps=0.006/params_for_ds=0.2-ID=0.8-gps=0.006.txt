@@ -1,0 +1,77 @@
+Last login: Wed Sep 14 12:29:06 on console
+(base) bohyunsmacbookpro@vpn-172-27-7-53 ~ % ssh bohyunk@walnut.math.ucla.edu
+(bohyunk@walnut.math.ucla.edu) Password: 
+Last login: Tue Sep  6 10:12:05 2022 from 192.31.0.5
+walnut.1> maple
+    |\^/|     Maple 2022 (X86 64 LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2022
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> Qm:= 0.006*10^(-3);
+                                                  -5
+                           Qm := 0.6000000000 x 10
+
+> R:= 0.2*0.5*10^(-3);
+                             R := 0.0001000000000
+
+> rho:= 963;
+                                  rho := 963
+
+>  nu:= 50.0*10^(-6);
+                            nu := 0.00005000000000
+
+> qN:= Qm/(2*Pi*rho*R);
+                                                  -5
+                           qN := 0.9916195830 x 10
+
+> g:= 9.8;
+                                   g := 9.8
+
+> phi:= x-> (3*((1+x)^4*(4*log(1+x)-3)+4*((1+x)^2)-1))/(16*x^3);
+                                 4                               2
+                          (1 + x)  (4 log(1 + x) - 3) + 4 (1 + x)  - 1
+         phi := x -> 3/16 --------------------------------------------
+                                                3
+                                               x
+
+> sol := fsolve(qN= g*x^3/(3*nu)*phi(x/R),x);
+                            sol := 0.0003096261559
+
+> hN:= sol;
+                             hN := 0.0003096261559
+
+> uN:= qN/hN;
+                              uN := 0.03202635062
+
+> alpha := hN/R;
+                             alpha := 3.096261559
+
+> sigma := 20.8*10^(-3);
+                            sigma := 0.02080000000
+
+> lc:= sqrt(sigma/(rho*g));
+                             lc := 0.001484586428
+
+> eta:= (hN/lc)^(4/3);
+                              eta := 0.1236828659
+
+> beta:= alpha^2/eta;
+                              beta := 77.51142870
+
+> kappa:= (lc/hN)^(2/3);
+                             kappa := 2.843447604
+
+> xscale:= kappa*hN;
+                           xscale := 0.0008804057511
+
+> yscale:= hN;
+                           yscale := 0.0003096261559
+
+> tscale:= (xscale/(3*qN/hN));
+                           tscale := 0.009163347620
+
+> sscale:= xscale/tscale;
+                            sscale := 0.09607905185
+
+>                                                                              
