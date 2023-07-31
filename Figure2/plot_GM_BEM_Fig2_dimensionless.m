@@ -1,21 +1,17 @@
-% compare simulation of two numerical methods on dimensionless scale
-% Create figure 2 (a) and 2(b)
-% Compare performance of BEM and GM on a coarse grid at physically
-% meaningful setting
+% This code creates figure 2 (a) and (b) to compare simulation of two numerical methods on dimensionless scale
+% It compares performance of BEM and GM on a coarse grid with physically meaningful parameters. 
+% In this case, alpha = 10.6, the number of grid size N = 3072,
+% dimensionless domain L0 = 24, eta = 0.223227, A_H =  0.001.
 
 clear all; clc; close all;
 %% loading the data from sim_data folder
-hjfile = 'GM_coarse_for_Fig2.dat';
-myfile = 'BEM_coarse_for_Fig2.dat';
+hjfile = 'Figure2(a)_GM_coarse_data.dat';
+myfile = 'Figure2(b)_BEM_coarse_data.dat';
 
-params_loc = 'params_for_Fig2.dat'; 
+params_loc = 'parameters_used_for_Fig2.dat'; 
 generic_pde = importdata(hjfile);
 my_pde = importdata(myfile);
 params = importdata(params_loc);
-%[parentdir,~,~]=fileparts(pwd);
-% generic_pde = importdata(fullfile(parentdir,hjfile));
-% my_pde = importdata(fullfile(parentdir,myfile));
-% params = importdata(fullfile(parentdir,params_loc));
 
 %% extracting parameters, grid size
 N = params(1,5);
