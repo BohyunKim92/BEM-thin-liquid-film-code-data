@@ -75,9 +75,9 @@ for j = 1:length(k_gen_c)
 %    my_x = my_pde_coarse(mybegindx_coarse:myendindx_coarse,1)*xscale;
 %    my_u = my_pde_coarse(mybegindx_coarse:myendindx_coarse,2)*yscale;
   
-   tt_coarse = generic_pde_coarse(begindx_coarse,4)
-   tt_fine= generic_pde_fine(begindx_fine,4)
-   mytt_coarse = my_pde_coarse(mybegindx_coarse,4)
+   tt_coarse = generic_pde_coarse(begindx_coarse,4);
+   tt_fine= generic_pde_fine(begindx_fine,4);
+   mytt_coarse = my_pde_coarse(mybegindx_coarse,4);
    [M,I] = min(u_coarse);
    % only plot a few for smoothness
    smoothindx_c = 1:2:N_coarse+1;
@@ -94,12 +94,12 @@ end
 
 %compare l2 err
 indx = 1:2:length(u_x_fine);
-figure;
-plot(u_x_coarse, u_fine(indx)-u_coarse);hold on;
-plot(u_x_coarse, u_fine(indx)-my_u);
-err_GM = norm(u_fine(indx)-u_coarse,2)/(L);
-err_BEM = norm(u_fine(indx)-my_u,2)/(L);
-legend('GM err', 'BEM err')
+%figure;
+%plot(u_x_coarse, u_fine(indx)-u_coarse);hold on;
+%plot(u_x_coarse, u_fine(indx)-my_u);
+err_GM = norm(u_fine(indx)-u_coarse,2)/(L)
+err_BEM = norm(u_fine(indx)-my_u,2)/(L)
+%legend('GM err', 'BEM err')
 
 figure(1)
 ax = gca;
