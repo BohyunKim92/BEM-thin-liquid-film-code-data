@@ -13,7 +13,8 @@ Data and code for generating Figure 3 is stored in "Figure3". Running "plot_GM_B
 
 ## Figure 4 data and generating code
 Data and code for generating Figure 4 is stored in "Figure4". 
-### Running "create_segmented_experimental_image_RP.m" will preprocess "Experimental_data_RP.png" to produce a segmented image. "GM_coarse_for_Fig3.dat", "GM_fine_for_Fig3.dat", "params_for_coarse_Fig3.dat", and "params_for_fine_Fig3.dat" to generate Figure 3(a) and 3(b).
+- Running "create_segmented_experimental_image_RP.m" will preprocess "Experimental_data_RP.png" to produce a segmented image.
+- "GM_coarse_for_Fig3.dat", "GM_fine_for_Fig3.dat", "params_for_coarse_Fig3.dat", and "params_for_fine_Fig3.dat" to generate Figure 3(a) and 3(b).
 
 ## Experimental Data
 The experimetal data is stored in "Experimental_data", which have two directories storing the experimental data corresponding to Fig.4 and Fig.5 of the paper. 
