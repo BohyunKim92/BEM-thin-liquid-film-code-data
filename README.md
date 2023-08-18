@@ -14,7 +14,11 @@ Data and code for generating Figure 3 is stored in "Figure3". Running "plot_GM_B
 ## Figure 4 data and generating code
 Data and code for generating Figure 4 is stored in "Figure4". 
 - Running "create_segmented_experimental_image_RP.m" will preprocess "Experimental_data_RP.png" to produce a segmented image.
-- "GM_coarse_for_Fig3.dat", "GM_fine_for_Fig3.dat", "params_for_coarse_Fig3.dat", and "params_for_fine_Fig3.dat" to generate Figure 3(a) and 3(b).
+- "compare_with_experiment_RP.m" is used to plot experimental data against simulation data using "segmented_RPimage_with_fiber.png" (experimental data), "Figure4_BEM_data.dat", "Figure4_GM_data.dat", and "parameters_used_for_Fig4.dat".
 
-## Experimental Data
-The experimetal data is stored in "Experimental_data", which have two directories storing the experimental data corresponding to Fig.4 and Fig.5 of the paper. 
+## Figure 5 data and generating code
+Data and code for generating Figure 5 is stored in "Figure5". 
+- "create_segmented_experimental_image_IS.m" will preprocess "Experimental_data_IS.jpg" to produce a segmented image.
+- "extract_experimental_data_IS.m" will then use "segmented_image_IS.png" to extract dat experimental data of IS scheme and save it as
+- "compare_with_experiment_IS.m" is used to plot experimental data against simulation data using "IS_experiment_data.dat" (experimental data), "Figure5_BEM_data.dat", "Figure5_GM_data.dat", and "parameters_used_for_Fig5.dat".
+
