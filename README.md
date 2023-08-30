@@ -7,7 +7,10 @@ Under Review in Journal of Computational Physics (2023)
 
 ## Code for Algorithms 
 Code for Bounded Entropy Method (BEM) and Generic Method (GM) is stored in "Code". 
-- To run the code, go to terminal under the Code directory. Type "cc -o comparable_simulation_with_adaptive_time.c" and press enter. Then, type "./a.out" and pressure enter. All of your simulation data should be stored in sim_data folder. 
+- To run the code, go to terminal under the Code directory. Type "cc comparable_simulation_with_adaptive_time.c" or "cc comparable_simulation_fixed_time.c" and press enter. Then, type "./a.out" and pressure enter. All of your simulation data should be stored in sim_data folder. 
+- "BEM_data_adaptive_time.dat": stores adaptive time BEM simulation data
+- "BEM_data_for_fixed_time.dat": stores fixed time BEM simulation data
+- "GM_data_for_fixed_time.dat": stores fixed time GM simulation data
 - "comparable_simulation_fixed_time.c" is used to simulate section 5.3.3 of reference paper with fixed time step. Both BEM and GM can be simulated. It simulate GM as a default. In order to run BEM comment out "run_gen()" and uncomment "run_pps()".  
 - "comparable_simulation_with_adaptive_time.c" is used to simulate section 5.3.3 of reference paper with an adaptive time step. Only BEM can be simulated with this code.
 
