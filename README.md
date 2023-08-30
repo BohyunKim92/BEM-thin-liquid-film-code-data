@@ -5,12 +5,11 @@ B. Kim, H. Ji, A. L. Bertozzi, A. Sadeghpour, and Y. S. Ju. *A positivity-
 preserving numerical method for a thin liquid film on a vertical cylindrical fiber*
 Under Review in Journal of Computational Physics (2023)
 
-## Algorithms
-### Bounded Entropy Method(BEM)
-Code for Bounded Entropy Method (Positivity-preserving)
-
-### Generic Method(GM)
-Code for Generic Method
+## Code for Algorithms 
+Code for Bounded Entropy Method (BEM) and Generic Method (GM) is stored in "Code". 
+- To run the code, go to terminal under the Code directory. Type "cc -o comparable_simulation_with_adaptive_time.c" and press enter. Then, type "./a.out" and pressure enter. All of your simulation data should be stored in sim_data folder. 
+- "comparable_simulation_fixed_time.c" is used to simulate section 5.3.3 of reference paper with fixed time step. Both BEM and GM can be simulated. It simulate GM as a default. In order to run BEM comment out "run_gen()" and uncomment "run_pps()".  
+- "comparable_simulation_with_adaptive_time.c" is used to simulate section 5.3.3 of reference paper with an adaptive time step. Only BEM can be simulated with this code.
 
 ## Figures
 ### Figure 2 data and generating code
@@ -36,8 +35,10 @@ Data and code for generating Figure 5 are stored in "Figure5".
 Data and code for generating Figure 6 are stored in "Figure6". 
 - "adaptive_time_no_sing.m" is used to plot change of time \delta_t data against simulation time data using "my_pde_adaptive_time_no_sing.dat", "cpu_time_pps_adaptive_time_no_sing.dat" , and "params_adaptive_time_no_sing.dat".
 
-### Figure 7 data and generating code
+### Figure 7,8 data and generating code
 Data and code for generating Figure 7 and Figure 8 are stored in "Figure7_and_8". 
 - "adaptive_singular.m" is used to plot change of time \delta_t data against simulation time data using "my_pde_adaptive_time_no_sing.dat", "cpu_time_pps_adaptive_time_no_sing.dat" , and "params_adaptive_time_no_sing.dat".
+
+
 
 
