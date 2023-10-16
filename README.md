@@ -3,7 +3,7 @@ Accompanying Matlab and c code for "A positivity-preserving numerical method for
 
 **B. Kim**, H. Ji, A. L. Bertozzi, A. Sadeghpour, and Y. S. Ju. *A positivity-
 preserving numerical method for a thin liquid film on a vertical cylindrical fiber*
-Under Review in Journal of Computational Physics (2023)
+(Accepted, To Appear) Journal of Computational Physics (2023)
 
 ## Code for Algorithms 
 Code for Bounded Entropy Method (BEM) and Generic Method (GM) is stored in "Code". 

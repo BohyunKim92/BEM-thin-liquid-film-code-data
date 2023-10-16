@@ -106,7 +106,8 @@ ax = gca;
 ax.FontSize = 25; ax.TickDir = 'out';
 xlabel('x');ylabel('h')
 set(findall(ax, 'Type','Line'),'LineWidth',4);
-legend("Coarse GM simulation","Coarse BEM simulation", "Fine GM simulation",'Location','northwest')
+legend("GM","BEM", "Reference Solution (GM)",'Location','northwest')
+%legend("Coarse GM simulation","Coarse BEM simulation", "Fine GM simulation",'Location','northwest')
 ylim([min(u_coarse),ceil(max(u_coarse))]);
 xlim([0 L])
 set(gca,'xtick',[0,5,10,15,20,24])
@@ -117,9 +118,11 @@ ax = gca;
 ax.FontSize = 25; ax.TickDir = 'out';
 xlabel('x');ylabel('h')
 set(findall(ax, 'Type','Line'),'LineWidth',4);
-legend("Coarse GM simulation","Coarse BEM simulation", "Fine GM simulation",'Location','northwest')
+legend("GM","BEM", "Reference Solution (GM)",'Location','northwest')
+%legend("Coarse GM simulation","Coarse BEM simulation", "Fine GM simulation",'Location','northwest')
 ylim([min(u_coarse),0.07]);
-xlim([19.0 L])
+xlim([21.0 L])
+%xlim([19.0 L])
 set(gca,'ytick',[min(u_coarse),0.0,0.07])
 %set(gca,'yticklabel',{num2str(round(min(u_coarse),4)),'0','0.05'})
 %daspect([1 1 1])
