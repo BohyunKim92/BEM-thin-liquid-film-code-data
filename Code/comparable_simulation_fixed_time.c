@@ -293,8 +293,6 @@ int timestep_pps(double tt_pps) /* return 1=good, 0=bad */
 			fprintf(newton_test_pps, "%g\t %d\t %g\n", tt_pps,j,maxerr_pps);
 			break;
 		}
-			
-	
 	}
 	
 	
